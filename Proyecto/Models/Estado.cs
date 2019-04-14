@@ -6,13 +6,14 @@ using System.Web;
 
 namespace Senalai.Models
 {
-    public class Tipo_Documento
+    public class Estado
     {
+
         [Key]
-        [Display(Name = "Tipo documento ")]
-        public int TipoDocumentoID { get; set; }
-        [Display(Name = "Tipo documento ")]
-        public string NombreDocumento { get; set; }
+        [Display(Name = "Estado")]
+        public int EstadoID { get; set; }
+        [Display(Name = "Estado")]
+        public string NombreEstado { get; set; }
 
         public virtual ICollection<Persona> Personas { get; set; }
     }
