@@ -16,9 +16,9 @@ namespace Senalai.Models
         [Display(Name = "Ubicación")]
         [Required(ErrorMessage = "Debe ingresar la {0}")]
         public string Ubicacion { get; set; }
-        [Display(Name = "Piso")]
-        [Required(ErrorMessage = "Debe ingresar el {0}")]
-        public string Detalle_Piso { get; set; }
+        //[Display(Name = "Piso")]
+        //[Required(ErrorMessage = "Debe ingresar el {0}")]
+        //public string Detalle_Piso { get; set; }
 
         public int Estado_AmbientesID { get; set; }
         public int personaID { get; set; }
