@@ -188,10 +188,27 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\Ambientes.cs" />
+    <Compile Include="Models\Ciudad.cs" />
+    <Compile Include="Models\Departamento.cs" />
+    <Compile Include="Models\Elementos.cs" />
+    <Compile Include="Models\EP.cs" />
+    <Compile Include="Models\Estado.cs" />
+    <Compile Include="Models\Estado_Ambientes.cs" />
+    <Compile Include="Models\Estado_Elementos.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NE.cs" />
+    <Compile Include="Models\Novedades.cs" />
+    <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\PP.cs" />
+    <Compile Include="Models\Prestamos.cs" />
+    <Compile Include="Models\Programa.cs" />
     <Compile Include="Models\ProyectoContext.cs" />
+    <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\Sexo.cs" />
     <Compile Include="Models\tipo_documento.cs" />
+    <Compile Include="Models\Tipo_Elementos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
