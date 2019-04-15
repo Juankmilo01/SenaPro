@@ -10,8 +10,8 @@ namespace Senalai.Models
     {
         [Key]
         public int NEID { get; set; }
-        public string Estado_Entrega { get; set; }
-        public string Estado_Devolucion { get; set; }
+        public DateTime Fecha_Salida { get; set; }
+    
 
         public int ElementosID { get; set; }
         public int NovedadesID { get; set; }
