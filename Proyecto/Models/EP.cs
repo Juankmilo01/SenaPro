@@ -16,8 +16,8 @@ namespace Senalai.Models
         public string Estado_Salida { get; set; }
         [Display(Name = "Disponibilidad")]
         public string Disponibilidad { get; set; }
-        [Display(Name = "Cantidad prestada")]
-        public int Cantidad_Prestada { get; set; }
+        //[Display(Name = "Cantidad prestada")]
+        //public int Cantidad_Prestada { get; set; }
 
         public int ElementosID { get; set; }
         public int PrestamosID { get; set; }
