@@ -1,0 +1,146 @@
+﻿@model Senalai.Models.Persona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad.NombreCiudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad.NombreCiudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado.NombreEstado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado.NombreEstado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Programa.NombrePrograma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Programa.NombrePrograma)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Roles.NombreRoles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Roles.NombreRoles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo.NombreSexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sexo.NombreSexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Documento.NombreDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Documento.NombreDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Primario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Primario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Segundo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Segundo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumerNumeroDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumerNumeroDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero_Celular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero_Celular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero_Ficha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero_Ficha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NovedadesID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NovedadesID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.personaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

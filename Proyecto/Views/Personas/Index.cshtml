@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Senalai.Models.Persona>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ciudad.NombreCiudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado.NombreEstado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Programa.NombrePrograma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Roles.NombreRoles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sexo.NombreSexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo_Documento.NombreDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Primario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Segundo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumerNumeroDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero_Celular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero_Ficha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NovedadesID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ciudad.NombreCiudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado.NombreEstado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Programa.NombrePrograma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Roles.NombreRoles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sexo.NombreSexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo_Documento.NombreDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Primario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Segundo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumerNumeroDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero_Celular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero_Ficha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NovedadesID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.personaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.personaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.personaID })
+        </td>
+    </tr>
+}
+
+</table>

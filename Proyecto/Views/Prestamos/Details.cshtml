@@ -1,0 +1,82 @@
+﻿@model Senalai.Models.Prestamos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prestamos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Disposicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Disposicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Prestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Prestamo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Devolucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Devolucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Inicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Inicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Final)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Final)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Prestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Prestamo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PrestamosID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

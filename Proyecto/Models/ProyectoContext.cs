@@ -19,6 +19,32 @@ namespace IdentitySample.Models
         {
         }
 
-     
+        public System.Data.Entity.DbSet<Senalai.Models.Tipo_Elementos> Tipo_Elementos { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Elementos> Elementos { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Ambientes> Ambientes { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Estado_Elementos> Estado_Elementos { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Prestamos> Prestamos { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Estado_Ambientes> Estado_Ambientes { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Persona> Personas { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Ciudad> Ciudads { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Estado> Estadoes { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Programa> Programas { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Roles> Roles { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Sexo> Sexoes { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Tipo_Documento> Tipo_Documento { get; set; }
+
+        public System.Data.Entity.DbSet<Senalai.Models.Departamento> Departamentoes { get; set; }
     }
 }

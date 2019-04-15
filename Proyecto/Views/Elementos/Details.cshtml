@@ -1,0 +1,82 @@
+﻿@model Senalai.Models.Elementos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Elementos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ambientes.Numero_Ambiente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ambientes.Numero_Ambiente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Elementos.Nombre_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Elementos.Nombre_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Elementos.Nombre_TipoElemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Elementos.Nombre_TipoElemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero_Serial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero_Serial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Placa_Equipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa_Equipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ubicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ubicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detalle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ElementosID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

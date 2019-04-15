@@ -24,14 +24,14 @@ namespace Senalai.Models
         public string Detalle { get; set; }
         [Display(Name = "Marca")]
         public string Marca { get; set; }
-        [Display(Name = "Fecha Entrada")]
-        [Required(ErrorMessage = "Debe ingresar la {0}")]
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd", ApplyFormatInEditMode = false)]
-        public DateTime Fecha_Entrada { get; set; }
-        [Display(Name = "Fecha Salida")]
-        [Required(ErrorMessage = "Debe ingresar la {0}")]
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd", ApplyFormatInEditMode = false)]
-        public DateTime Fecha_Salida { get; set; }
+        //[Display(Name = "Fecha Entrada")]
+        //[Required(ErrorMessage = "Debe ingresar la {0}")]
+        //[DisplayFormat(DataFormatString = "{0:yyyy/MM/dd", ApplyFormatInEditMode = false)]
+        //public DateTime Fecha_Entrada { get; set; }
+        //[Display(Name = "Fecha Salida")]
+        //[Required(ErrorMessage = "Debe ingresar la {0}")]
+        //[DisplayFormat(DataFormatString = "{0:yyyy/MM/dd", ApplyFormatInEditMode = false)]
+        //public DateTime Fecha_Salida { get; set; }
 
         public int Tipo_ElementosID { get; set; }        
         public int Estado_ElementosID { get; set; }
