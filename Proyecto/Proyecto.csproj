@@ -317,11 +317,6 @@
     <Content Include="Views\Tipo_Elementos\Details.cshtml" />
     <Content Include="Views\Tipo_Elementos\Edit.cshtml" />
     <Content Include="Views\Tipo_Elementos\Index.cshtml" />
-    <Content Include="Views\Prestamos\Create.cshtml" />
-    <Content Include="Views\Prestamos\Delete.cshtml" />
-    <Content Include="Views\Prestamos\Details.cshtml" />
-    <Content Include="Views\Prestamos\Edit.cshtml" />
-    <Content Include="Views\Prestamos\Index.cshtml" />
     <Content Include="Views\Ambientes\Create.cshtml" />
     <Content Include="Views\Ambientes\Delete.cshtml" />
     <Content Include="Views\Ambientes\Details.cshtml" />
@@ -387,6 +382,11 @@
     <Content Include="Views\Novedades\Details.cshtml" />
     <Content Include="Views\Novedades\Edit.cshtml" />
     <Content Include="Views\Novedades\Index.cshtml" />
+    <Content Include="Views\Prestamos\Create.cshtml" />
+    <Content Include="Views\Prestamos\Delete.cshtml" />
+    <Content Include="Views\Prestamos\Details.cshtml" />
+    <Content Include="Views\Prestamos\Edit.cshtml" />
+    <Content Include="Views\Prestamos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

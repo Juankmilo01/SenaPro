@@ -18,6 +18,7 @@ namespace Proyecto.Controllers
         // GET: Prestamos
         public ActionResult Index()
         {
+            var elementos = db.Elementos.Include(e => e.ElementosID);
             return View(db.Prestamos.ToList());
         }
 
@@ -39,6 +40,7 @@ namespace Proyecto.Controllers
         // GET: Prestamos/Create
         public ActionResult Create()
         {
+            ViewBag.AmbientesID = new SelectList(db.Elementos, "ElementosID", "Numero_Serial");
             return View();
         }
 
@@ -47,7 +49,7 @@ namespace Proyecto.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PrestamosID,Cantidad,Estado_Disposicion,Fecha_Prestamo,Fecha_Devolucion,Fecha_Inicial,Fecha_Final,Descripcion,Tipo_Prestamo")] Prestamos prestamos)
+        public ActionResult Create([Bind(Include = "PrestamosID,Descripcion,ElementosID")] Prestamos prestamos)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace Proyecto.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.AmbientesID = new SelectList(db.Elementos, "ElementosID", "Numero_Serial",prestamos.ElementosID);
 
             return View(prestamos);
         }
@@ -71,6 +74,7 @@ namespace Proyecto.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.AmbientesID = new SelectList(db.Elementos, "ElementosID", "Numero_Serial", prestamos.ElementosID);
             return View(prestamos);
         }
 
@@ -79,7 +83,7 @@ namespace Proyecto.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PrestamosID,Cantidad,Estado_Disposicion,Fecha_Prestamo,Fecha_Devolucion,Fecha_Inicial,Fecha_Final,Descripcion,Tipo_Prestamo")] Prestamos prestamos)
+        public ActionResult Edit([Bind(Include = "PrestamosID,Descripcion,ElementosID")] Prestamos prestamos)
         {
             if (ModelState.IsValid)
             {
@@ -87,6 +91,7 @@ namespace Proyecto.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.AmbientesID = new SelectList(db.Elementos, "ElementosID", "Numero_Serial", prestamos.ElementosID);
             return View(prestamos);
         }
 
