@@ -1,11 +1,14 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Sena L.A.I</title>
-    @Styles.Render("~/Content/css")
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/Boostrap/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="~/Content/Bootstrap/footer.css" />
+
 
 </head>
 <body>
@@ -17,31 +20,64 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Sena L.A.I", "Index", "Home", null, new { @class = "navbar-brand" })
+                <img style="width:50px; height:50px;" src="~/Content/fonts/sena.png" class="pull-left">
+                @Html.ActionLink(" SENA L.A.I", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Prestamos", "Index", "Prestamos")</li>
-                    <li>@Html.ActionLink("Elementos", "Index", "Elementos")</li>
-                    <li>@Html.ActionLink("Tipo Elemento", "Index", "Tipo_Elementos")</li>
-                    <li>@Html.ActionLink("Ambientes", "Index", "Ambientes")</li>
 
-                    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
-                    {
-                        <li>@Html.ActionLink("RolesAdmin", "Index", "RolesAdmin")</li>
-                        <li>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</li>
-                    }
-                </ul>
-                @Html.Partial("_LoginPartial")
+            @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+            {
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrar Persona<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Administrar Personas", "Index", "Personas")</li>
+                                <li>@Html.ActionLink("Administrar Tipo Documento", "Index", "Tipo_Documento")</li>
+                                <li>@Html.ActionLink("Administrar Sexo", "Index", "Sexo")</li>
+                                <li>@Html.ActionLink("Administrar Departamentos", "Index", "Departamento")</li>
+                                <li>@Html.ActionLink("Administrar Ciudades", "Index", "Ciudad")</li>
+                                <li>@Html.ActionLink("Administrar Estado", "Index", "Estado")</li>
+                                <li>@Html.ActionLink("Administrar Programa", "Index", "Programas")</li>
+                                <li>@Html.ActionLink("Administrar Roles", "Index", "Roles")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Elementos<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Administrar Elementos", "Index", "Elementos")</li>
+                                <li>@Html.ActionLink("Administrar Tipo Elemento", "Index", "Tipo_Elementos")</li>
+                                <li>@Html.ActionLink("Administrar Estado Elemento", "Index", "Estado_Elementos")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prestamos<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Administrar Prestamos", "Index", "Prestamos")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ambientes<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Administrar Ambientes", "Index", "Ambientes")</li>
+                                <li>@Html.ActionLink("Administrar Estado Ambientes", "Index", "Estado_Ambientes")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Novedades<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Administrar Novedades", "Index", "Novedades")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            }
             </div>
-        </div>
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer class="colorfondo">
-            <p>&copy; @DateTime.Now.Year - Sena Aplicativo</p>
-        </footer>
+        <!--footer start from here-->
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -49,3 +85,45 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 footer-col">
+                <h6 class="heading7">
+                    SENA L.A.I.
+                </h6>
+                <p>Se abre un mundo de posibilidades para aquellos individuos que hacemos uso de sus servicios, una de ellos es que ofrece la posibilidad de inventario de equipos, prestamos de equipos, auditorio y locker’s para fines educativos; así, resulta ser una herramienta de gran utilidad para la formación de profesionales, profesores y alumnos de todo tipo, ya que ofrece una organización de los elementos que este contiene</p>
+
+
+            </div>
+            <div class="col-md-3 col-sm-6 footer-col">
+                <h6 class="heading7">NUESTROS DATOS</h6>
+
+                <p><i class="fa fa-map-pin"></i>Direccion: Cl. 51 #57-70, Medellín, Antioquia </p>
+                <p><i class="fa fa-phone"></i> Telefono:  (colombia) :+57 1 800 0910270</p>
+                <p><i class="fa fa-envelope"></i> E-mail : gpservicioalcliente@sena.edu.co</p>
+
+                <ul class="footer-ul"></ul>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+<!--footer start from here-->
+
+<div class="copyright">
+    <div class="container">
+        <div class="col-md-6">
+            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        </div>
+        <div class="col-md-6">
+            <ul class="bottom_ul">
+
+                <li><a href="politicasPrivacidad.php">Políticas de Privacidad y uso </a></li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
