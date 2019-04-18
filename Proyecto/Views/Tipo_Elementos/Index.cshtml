@@ -14,9 +14,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Nombre_TipoElemento)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </th>
         <th></th>
     </tr>
 
@@ -24,9 +21,6 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Nombre_TipoElemento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descripcion)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Tipo_ElementosID }) |

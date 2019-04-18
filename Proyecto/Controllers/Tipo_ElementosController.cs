@@ -47,7 +47,7 @@ namespace Proyecto.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Tipo_ElementosID,Nombre_TipoElemento,Descripcion")] Tipo_Elementos tipo_Elementos)
+        public ActionResult Create([Bind(Include = "Tipo_ElementosID,Nombre_TipoElemento")] Tipo_Elementos tipo_Elementos)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace Proyecto.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Tipo_ElementosID,Nombre_TipoElemento,Descripcion")] Tipo_Elementos tipo_Elementos)
+        public ActionResult Edit([Bind(Include = "Tipo_ElementosID,Nombre_TipoElemento")] Tipo_Elementos tipo_Elementos)
         {
             if (ModelState.IsValid)
             {
