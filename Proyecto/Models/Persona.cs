@@ -24,7 +24,7 @@ namespace Senalai.Models
         [Display(Name = "Tipo Documento")]
         public int TipoDocumentoID { get; set; }
         [Display(Name = "Número Documento")]
-        public int NumerNumeroDocumento { get; set; }
+        public int NumeroDocumento { get; set; }
         [Display(Name = "Sexo")]
         public int SexoID { get; set; }
         [Display(Name = "Ciudad ")]
@@ -58,9 +58,6 @@ namespace Senalai.Models
         public int RolesID { get; set; }
 
 
-
-        
-    
         public virtual Ciudad Ciudad { get; set; }
         public virtual Estado Estado { get; set; }
         public virtual Programa Programa { get; set; }

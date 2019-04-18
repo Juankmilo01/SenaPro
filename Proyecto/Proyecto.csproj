@@ -327,11 +327,6 @@
     <Content Include="Views\Elementos\Details.cshtml" />
     <Content Include="Views\Elementos\Edit.cshtml" />
     <Content Include="Views\Elementos\Index.cshtml" />
-    <Content Include="Views\Personas\Create.cshtml" />
-    <Content Include="Views\Personas\Delete.cshtml" />
-    <Content Include="Views\Personas\Details.cshtml" />
-    <Content Include="Views\Personas\Edit.cshtml" />
-    <Content Include="Views\Personas\Index.cshtml" />
     <Content Include="Views\Tipo_Documento\Create.cshtml" />
     <Content Include="Views\Tipo_Documento\Delete.cshtml" />
     <Content Include="Views\Tipo_Documento\Details.cshtml" />
@@ -387,6 +382,11 @@
     <Content Include="Views\Prestamos\Details.cshtml" />
     <Content Include="Views\Prestamos\Edit.cshtml" />
     <Content Include="Views\Prestamos\Index.cshtml" />
+    <Content Include="Views\Personas\Create.cshtml" />
+    <Content Include="Views\Personas\Delete.cshtml" />
+    <Content Include="Views\Personas\Details.cshtml" />
+    <Content Include="Views\Personas\Edit.cshtml" />
+    <Content Include="Views\Personas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

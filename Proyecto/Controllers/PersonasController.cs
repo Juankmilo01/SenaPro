@@ -54,7 +54,7 @@ namespace Proyecto.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "personaID,Nombre,Apellido_Primario,Apellido_Segundo,TipoDocumentoID,NumerNumeroDocumento,SexoID,CuidadID,Direccion,Telefono,Numero_Celular,Email,ProgramaID,Numero_Ficha,EstadoID,RolesID,NovedadesID")] Persona persona)
+        public ActionResult Create([Bind(Include = "personaID,Nombre,Apellido_Primario,Apellido_Segundo,TipoDocumentoID,NumeroDocumento,SexoID,CuidadID,Direccion,Telefono,Numero_Celular,Email,ProgramaID,Numero_Ficha,EstadoID,RolesID,NovedadesID")] Persona persona)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace Proyecto.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "personaID,Nombre,Apellido_Primario,Apellido_Segundo,TipoDocumentoID,NumerNumeroDocumento,SexoID,CuidadID,Direccion,Telefono,Numero_Celular,Email,ProgramaID,Numero_Ficha,EstadoID,RolesID,NovedadesID")] Persona persona)
+        public ActionResult Edit([Bind(Include = "personaID,Nombre,Apellido_Primario,Apellido_Segundo,TipoDocumentoID,NumeroDocumento,SexoID,CuidadID,Direccion,Telefono,Numero_Celular,Email,ProgramaID,Numero_Ficha,EstadoID,RolesID,NovedadesID")] Persona persona)
         {
             if (ModelState.IsValid)
             {

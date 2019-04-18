@@ -24,8 +24,8 @@
                 @Html.ActionLink(" SENA L.A.I", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
 
-            @if (Request.IsAuthenticated && User.IsInRole("Admin"))
-            {
+            @*@if (Request.IsAuthenticated && User.IsInRole("Admin"))
+            {*@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
@@ -70,7 +70,7 @@
                         </li>
                     </ul>
                 </div>
-            }
+            @*}*@
             </div>
     </div>
     <div class="container body-content">
