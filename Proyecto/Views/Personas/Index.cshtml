@@ -57,62 +57,62 @@
         <th>
             @Html.DisplayNameFor(model => model.Roles.NombreRoles)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.NovedadesID)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayNameFor(model => model.Nombre)
+            @Html.DisplayFor(modelItem => item.Nombre)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Apellido_Primario)
+            @Html.DisplayFor(modelItem => item.Apellido_Primario)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Apellido_Segundo)
+            @Html.DisplayFor(modelItem => item.Apellido_Segundo)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Tipo_Documento.NombreDocumento)
+            @Html.DisplayFor(modelItem => item.Tipo_Documento.NombreDocumento)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.NumeroDocumento)
+            @Html.DisplayFor(modelItem => item.NumeroDocumento)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Sexo.NombreSexo)
+            @Html.DisplayFor(modelItem => item.Sexo.NombreSexo)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Ciudad.NombreCiudad)
+            @Html.DisplayFor(modelItem => item.Ciudad.NombreCiudad)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Direccion)
+            @Html.DisplayFor(modelItem => item.Direccion)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Telefono)
+            @Html.DisplayFor(modelItem => item.Telefono)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Numero_Celular)
+            @Html.DisplayFor(modelItem => item.Numero_Celular)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Email)
+            @Html.DisplayFor(modelItem => item.Email)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Programa.NombrePrograma)
+            @Html.DisplayFor(modelItem => item.Programa.NombrePrograma)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Numero_Ficha)
+            @Html.DisplayFor(modelItem => item.Numero_Ficha)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Estado.NombreEstado)
+            @Html.DisplayFor(modelItem => item.Estado.NombreEstado)
         </td>
         <td>
-            @Html.DisplayNameFor(model => model.Roles.NombreRoles)
+            @Html.DisplayFor(modelItem => item.Roles.NombreRoles)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayNameFor(model => model.NovedadesID)
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.personaID }) |
             @Html.ActionLink("Details", "Details", new { id = item.personaID }) |
