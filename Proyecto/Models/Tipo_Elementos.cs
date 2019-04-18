@@ -13,9 +13,6 @@ namespace Senalai.Models
         [Display(Name = "Tipo elemento ")]
         public string Nombre_TipoElemento { get; set; }
 
-        public string Descripcion { get; set; }
-
-
         public virtual ICollection<Elementos> Elementos { get; set; }
         
     }
