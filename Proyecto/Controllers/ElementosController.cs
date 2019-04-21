@@ -53,8 +53,19 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ElementosID,Numero_Serial,Placa_Equipo,Ubicacion,Detalle,Marca,Tipo_ElementosID,Estado_ElementosID,AmbientesID")] Elementos elementos)
         {
+            // variable tipo booleana para consultar en la base datos para consultar que existe o no existe en la base de datos
+            bool existNumSerial = db.Elementos.Any(e => e.Numero_Serial == elementos.Numero_Serial);
+            bool existPlaca = db.Elementos.Any(p => p.Placa_Equipo == elementos.Placa_Equipo);
+            if (existNumSerial)
+            {
+                ModelState.AddModelError("Numero_Serial", "El número de serial ya existe!");
+            }else if (existPlaca)
+            {
+                ModelState.AddModelError("Placa_Equipo", "El número de la placa ya existe!");
+            }
             if (ModelState.IsValid)
             {
+                
                 db.Elementos.Add(elementos);
                 db.SaveChanges();
                 return RedirectToAction("Index");

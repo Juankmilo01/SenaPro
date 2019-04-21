@@ -12,6 +12,7 @@ namespace Senalai.Models
         public int ElementosID { get; set; }
         [Display(Name = "Número serial")]
         [Required(ErrorMessage = "Debe ingresar el {0}")]
+        //[Unique(ErrorMessage = "¡ Esto ya existe! ")]
         public string Numero_Serial { get; set; }
         [Display(Name = "Placa equipo")]
         [Required(ErrorMessage = "Debe ingresar la {0}")]

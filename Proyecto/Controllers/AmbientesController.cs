@@ -57,6 +57,7 @@ namespace Proyecto.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 db.Ambientes.Add(ambientes);
                 db.SaveChanges();
                 return RedirectToAction("Index");
