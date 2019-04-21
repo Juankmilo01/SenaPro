@@ -23,7 +23,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Ubicacion)
         </th>
-        <th></th>
+        <th></th><th>Acciones</th><th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -41,9 +41,13 @@
             @Html.DisplayFor(modelItem => item.Ubicacion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AmbientesID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AmbientesID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AmbientesID })
+            @Html.ActionLink("Modificar", "Edit", new { id = item.personaID }, new { @class = "btn btn-success" })
+        </td>
+        <td>
+            @Html.ActionLink("Detalles", "Details", new { id = item.personaID }, new { @class = "btn btn-info" })
+        </td>
+        <td>
+            @Html.ActionLink("Borrar", "Delete", new { id = item.personaID }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
