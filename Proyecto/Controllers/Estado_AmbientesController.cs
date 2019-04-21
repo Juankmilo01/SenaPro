@@ -49,6 +49,11 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Estado_AmbientesID,Nombre_Estado")] Estado_Ambientes estado_Ambientes)
         {
+            bool existEst = db.Estado_Ambientes.Any(e => e.Nombre_Estado == estado_Ambientes.Nombre_Estado);
+            if (existEst)
+            {
+                ModelState.AddModelError("Nombre_Estado", "El Estado ya existe!");
+            }
             if (ModelState.IsValid)
             {
                 db.Estado_Ambientes.Add(estado_Ambientes);
