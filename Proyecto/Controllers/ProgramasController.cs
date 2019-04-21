@@ -49,6 +49,11 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ProgramaID,NombrePrograma")] Programa programa)
         {
+            bool existPro = db.Programas.Any(e => e.NombrePrograma == programa.NombrePrograma);
+            if (existPro)
+            {
+                ModelState.AddModelError("NombrePrograma", "El Programa ya existe!");
+            }
             if (ModelState.IsValid)
             {
                 db.Programas.Add(programa);

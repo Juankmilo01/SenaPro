@@ -51,6 +51,11 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CuidadID,NombreCiudad,DepartamentoID")] Ciudad ciudad)
         {
+            bool existCiu = db.Ciudads.Any(e => e.NombreCiudad == ciudad.NombreCiudad);
+            if (existCiu)
+            {
+                ModelState.AddModelError("NombreCiudad", "La Ciudad ya existe!");
+            }
             if (ModelState.IsValid)
             {
                 db.Ciudads.Add(ciudad);

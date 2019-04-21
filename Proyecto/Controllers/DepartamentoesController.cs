@@ -49,6 +49,11 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "DepartamentoID,NombreDepartamento")] Departamento departamento)
         {
+            bool existDep = db.Departamentoes.Any(e => e.NombreDepartamento == departamento.NombreDepartamento);
+            if (existDep)
+            {
+                ModelState.AddModelError("NombreDepartamento", "El Departamento ya existe!");
+            }
             if (ModelState.IsValid)
             {
                 db.Departamentoes.Add(departamento);

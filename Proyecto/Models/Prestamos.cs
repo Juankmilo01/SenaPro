@@ -26,5 +26,6 @@ namespace Senalai.Models
         public virtual ICollection<PP> PPs { get; set; }
         public virtual ICollection<EP> EPs { get; set; }
 
+
     }
 }

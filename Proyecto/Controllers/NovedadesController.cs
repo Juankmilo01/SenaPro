@@ -49,6 +49,7 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "NovedadesID,Codigo_Novedad,Descripcion,Fecha_Realizacion")] Novedades novedades)
         {
+            
             if (ModelState.IsValid)
             {
                 db.Novedades.Add(novedades);

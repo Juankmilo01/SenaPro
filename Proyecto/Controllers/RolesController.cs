@@ -49,6 +49,11 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "RolesID,NombreRoles")] Roles roles)
         {
+            bool existRol = db.Roles.Any(e => e.NombreRoles == roles.NombreRoles);
+            if (existRol)
+            {
+                ModelState.AddModelError("NombreRoles", "El Rol ya existe!");
+            }
             if (ModelState.IsValid)
             {
                 db.Roles.Add(roles);

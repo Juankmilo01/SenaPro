@@ -49,6 +49,11 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Tipo_ElementosID,Nombre_TipoElemento")] Tipo_Elementos tipo_Elementos)
         {
+            bool existTEl = db.Tipo_Elementos.Any(e => e.Nombre_TipoElemento == tipo_Elementos.Nombre_TipoElemento);
+            if (existTEl)
+            {
+                ModelState.AddModelError("Nombre_TipoElemento", "El Tipo de Elemento ya existe!");
+            }
             if (ModelState.IsValid)
             {
                 db.Tipo_Elementos.Add(tipo_Elementos);

@@ -56,6 +56,16 @@ namespace Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "personaID,Nombre,Apellido_Primario,Apellido_Segundo,TipoDocumentoID,NumeroDocumento,SexoID,CuidadID,Direccion,Telefono,Numero_Celular,Email,ProgramaID,Numero_Ficha,EstadoID,RolesID,NovedadesID")] Persona persona)
         {
+            bool existNumDocu = db.Personas.Any(e => e.NumeroDocumento == persona.NumeroDocumento);
+            bool existEmail = db.Personas.Any(p => p.Email == persona.Email);
+            if (existNumDocu)
+            {
+                ModelState.AddModelError("NumeroDocumento", "El número de Documento ya existe!");
+            }
+            else if (existEmail)
+            {
+                ModelState.AddModelError("Email", "El Email ya existe!");
+            }
             if (ModelState.IsValid)
             {
                 db.Personas.Add(persona);
