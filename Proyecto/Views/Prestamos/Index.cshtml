@@ -41,13 +41,13 @@
             @Html.DisplayFor(modelItem => item.Descripcion)
         </td>
         <td>
-            @Html.ActionLink("Modificar", "Edit", new { id = item.personaID }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Modificar", "Edit", new { id = item.PrestamosID }, new { @class = "btn btn-success" })
         </td>
         <td>
-            @Html.ActionLink("Detalles", "Details", new { id = item.personaID }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Detalles", "Details", new { id = item.PrestamosID }, new { @class = "btn btn-info" })
         </td>
         <td>
-            @Html.ActionLink("Borrar", "Delete", new { id = item.personaID }, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Borrar", "Delete", new { id = item.PrestamosID }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
