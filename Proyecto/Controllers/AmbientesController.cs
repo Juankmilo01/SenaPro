@@ -41,7 +41,10 @@ namespace Proyecto.Controllers
         public ActionResult Create()
         {
             ViewBag.Estado_AmbientesID = new SelectList(db.Estado_Ambientes, "Estado_AmbientesID", "Nombre_Estado");
-            ViewBag.personaID = new SelectList(db.Personas, "personaID", "Nombre");
+            ViewBag.personaID = new SelectList(db.Personas.Where(r => r.Roles.NombreRoles == "Instructor"), "personaID", "Nombre");
+
+            //List<Persona> personaID = db.Database.SqlQuery<Persona>("SELECT * FROM Personas where RolesID = 2").ToList();
+            //ViewBag.resultado = personaID;
             return View();
         }
 
