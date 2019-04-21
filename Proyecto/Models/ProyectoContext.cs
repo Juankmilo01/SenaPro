@@ -54,5 +54,7 @@ namespace IdentitySample.Models
         public System.Data.Entity.DbSet<Senalai.Models.Departamento> Departamentoes { get; set; }
 
         public System.Data.Entity.DbSet<Senalai.Models.Novedades> Novedades { get; set; }
+
+        object placeHolderVariable;
     }
 }
