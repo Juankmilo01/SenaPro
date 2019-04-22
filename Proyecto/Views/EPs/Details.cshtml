@@ -1,0 +1,74 @@
+﻿@model Senalai.Models.EP
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Elementos.Numero_Serial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Elementos.Numero_Serial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prestamos.Estado_Disposicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prestamos.Estado_Disposicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Entrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Entrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Salida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Salida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Inicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Inicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Final)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Final)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EPID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

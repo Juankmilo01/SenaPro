@@ -1,0 +1,80 @@
+﻿@model Senalai.Models.EP
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Elementos.Numero_Serial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Elementos.Numero_Serial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prestamos.Estado_Disposicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prestamos.Estado_Disposicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Entrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Entrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Salida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Salida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Inicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Inicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Final)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Final)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

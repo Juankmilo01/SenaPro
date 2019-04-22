@@ -181,6 +181,7 @@
     <Compile Include="Controllers\CiudadsController.cs" />
     <Compile Include="Controllers\DepartamentoesController.cs" />
     <Compile Include="Controllers\ElementosController.cs" />
+    <Compile Include="Controllers\EPsController.cs" />
     <Compile Include="Controllers\EstadoesController.cs" />
     <Compile Include="Controllers\Estado_AmbientesController.cs" />
     <Compile Include="Controllers\Estado_ElementosController.cs" />
@@ -390,6 +391,11 @@
     <Content Include="Views\Prestamos\Details.cshtml" />
     <Content Include="Views\Prestamos\Edit.cshtml" />
     <Content Include="Views\Prestamos\Index.cshtml" />
+    <Content Include="Views\EPs\Create.cshtml" />
+    <Content Include="Views\EPs\Delete.cshtml" />
+    <Content Include="Views\EPs\Details.cshtml" />
+    <Content Include="Views\EPs\Edit.cshtml" />
+    <Content Include="Views\EPs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

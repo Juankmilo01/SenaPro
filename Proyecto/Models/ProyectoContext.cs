@@ -55,6 +55,6 @@ namespace IdentitySample.Models
 
         public System.Data.Entity.DbSet<Senalai.Models.Novedades> Novedades { get; set; }
 
-
+        public System.Data.Entity.DbSet<Senalai.Models.EP> EPs { get; set; }
     }
 }
