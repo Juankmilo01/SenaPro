@@ -4,34 +4,36 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 style=" text-align:center">ESTADOS AMBIENTES</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo Estado", "Create", null, new { @class = "btn btn-warning" })
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre_Estado)
-        </th>
-        <th></th><th>Acciones</th><th></th>
-    </tr>
+<table class="table table-light table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre_Estado)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
 
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {<tbody>
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Nombre_Estado)
         </td>
         <td>
             @Html.ActionLink("Modificar", "Edit", new { id = item.Estado_AmbientesID }, new { @class = "btn btn-success" })
-        </td>
-        <td>
+
             @Html.ActionLink("Detalles", "Details", new { id = item.Estado_AmbientesID }, new { @class = "btn btn-info" })
-        </td>
-        <td>
+
             @Html.ActionLink("Borrar", "Delete", new { id = item.Estado_AmbientesID }, new { @class = "btn btn-danger" })
         </td>
     </tr>
-}
+</tbody>
+    }
 
 </table>

@@ -4,32 +4,37 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 style=" text-align:center">TIPO DE DOCUMENTOS</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo Documento", "Create", null, new { @class = "btn btn-warning" })
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NombreDocumento)
-        </th>
-       <th>Acciones</th>
-    </tr>
+<table class="table table-light table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreDocumento)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NombreDocumento)
-        </td>
-        <td>
-            @Html.ActionLink("Modificar", "Edit", new { id = item.TipoDocumentoID }, new { @class = "btn btn-success" })
+    @foreach (var item in Model)
+    {
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreDocumento)
+            </td>
+            <td>
+                @Html.ActionLink("Modificar", "Edit", new { id = item.TipoDocumentoID }, new { @class = "btn btn-success" })
 
-            @Html.ActionLink("Detalles", "Details", new { id = item.TipoDocumentoID }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Detalles", "Details", new { id = item.TipoDocumentoID }, new { @class = "btn btn-info" })
 
-            @Html.ActionLink("Borrar", "Delete", new { id = item.TipoDocumentoID }, new { @class = "btn btn-danger" })
-        </td>
-    </tr>
-}
+                @Html.ActionLink("Borrar", "Delete", new { id = item.TipoDocumentoID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    </tbody>
+            }
 
-</table>
+    </table>
