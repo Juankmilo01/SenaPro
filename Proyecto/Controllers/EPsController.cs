@@ -40,7 +40,7 @@ namespace Proyecto.Controllers
         // GET: EPs/Create
         public ActionResult Create()
         {
-            ViewBag.ElementosID = new SelectList(db.Elementos, "ElementosID", "Numero_Serial");
+            ViewBag.ElementosID = new SelectList(db.Elementos.Where(e => e.Estado_Elementos.Nombre_Estado == "Activo"), "ElementosID", "Numero_Serial");
             ViewBag.PrestamosID = new SelectList(db.Prestamos, "PrestamosID", "Estado_Disposicion");
             return View();
         }
@@ -50,7 +50,7 @@ namespace Proyecto.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EPID,Estado_Entrega,Estado_Salida,Fecha_Inicial,Fecha_Final,Descripcion,ElementosID,PrestamosID")] EP eP)
+        public ActionResult Create([Bind(Include = "EPID,Estado_Entrega,Fecha_Inicial,Fecha_Final,Descripcion,ElementosID,PrestamosID")] EP eP)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Proyecto.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EPID,Estado_Entrega,Estado_Salida,Fecha_Inicial,Fecha_Final,Descripcion,ElementosID,PrestamosID")] EP eP)
+        public ActionResult Edit([Bind(Include = "EPID,Estado_Entrega,Fecha_Inicial,Fecha_Final,Descripcion,ElementosID,PrestamosID")] EP eP)
         {
             if (ModelState.IsValid)
             {

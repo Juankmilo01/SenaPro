@@ -12,8 +12,8 @@ namespace Senalai.Models
         public int EPID { get; set; }
         [Display(Name = "Estado de entrega")]
         public string Estado_Entrega { get; set; }
-        [Display(Name = "Estado de salida")]
-        public string Estado_Salida { get; set; }
+        //[Display(Name = "Estado de salida")]
+        //public string Estado_Salida { get; set; }
         //[Display(Name = "Disponibilidad")]
         //public string Disponibilidad { get; set; }
         //[Display(Name = "Cantidad")]
