@@ -4,76 +4,83 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 style=" text-align:center">ELEMENTOS</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo Elemento", "Create", null, new { @class = "btn btn-warning" })
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Ambientes.Numero_Ambiente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Estado_Elementos.Nombre_Estado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo_Elementos.Nombre_TipoElemento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Numero_Serial)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Placa_Equipo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Ubicacion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Detalle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Marca)
-        </th>
-        <th></th><th>Acciones</th><th></th>
-    </tr>
+<table class="table table-light table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ambientes.Numero_Ambiente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado_Elementos.Nombre_Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_Elementos.Nombre_TipoElemento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_Serial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Placa_Equipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ubicacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Detalle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th></th>
+            <th>Acciones</th>
+            <th></th>
+        </tr>
+    </thead>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ambientes.Numero_Ambiente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Estado_Elementos.Nombre_Estado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tipo_Elementos.Nombre_TipoElemento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Numero_Serial)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Placa_Equipo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ubicacion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Detalle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Marca)
-        </td>
-        <td>
-            @Html.ActionLink("Modificar", "Edit", new { id = item.ElementosID }, new { @class = "btn btn-success" })
-        </td>
-        <td>
-            @Html.ActionLink("Detalles", "Details", new { id = item.ElementosID }, new { @class = "btn btn-info" })
-        </td>
-        <td>
-            @Html.ActionLink("Borrar", "Delete", new { id = item.ElementosID }, new { @class = "btn btn-danger" })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ambientes.Numero_Ambiente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado_Elementos.Nombre_Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_Elementos.Nombre_TipoElemento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_Serial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Placa_Equipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ubicacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detalle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.ActionLink("Modificar", "Edit", new { id = item.ElementosID }, new { @class = "btn btn-success" })
+            </td>
+            <td>
+                @Html.ActionLink("Detalles", "Details", new { id = item.ElementosID }, new { @class = "btn btn-info" })
+            </td>
+            <td>
+                @Html.ActionLink("Borrar", "Delete", new { id = item.ElementosID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    </tbody>
+            }
 
-</table>
+    </table>

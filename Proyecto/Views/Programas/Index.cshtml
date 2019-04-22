@@ -4,34 +4,37 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 style=" text-align:center">PROGRAMAS</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo Programa", "Create", null, new { @class = "btn btn-warning" })
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NombrePrograma)
-        </th>
-        <th></th><th>Acciones</th><th></th>
-    </tr>
+<table class="table table-light table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombrePrograma)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NombrePrograma)
-        </td>
-        <td>
-            @Html.ActionLink("Modificar", "Edit", new { id = item.ProgramaID }, new { @class = "btn btn-success" })
-        </td>
-        <td>
-            @Html.ActionLink("Detalles", "Details", new { id = item.ProgramaID }, new { @class = "btn btn-info" })
-        </td>
-        <td>
-            @Html.ActionLink("Borrar", "Delete", new { id = item.ProgramaID }, new { @class = "btn btn-danger" })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombrePrograma)
+            </td>
+            <td>
+                @Html.ActionLink("Modificar", "Edit", new { id = item.ProgramaID }, new { @class = "btn btn-success" })
 
-</table>
+                @Html.ActionLink("Detalles", "Details", new { id = item.ProgramaID }, new { @class = "btn btn-info" })
+
+                @Html.ActionLink("Borrar", "Delete", new { id = item.ProgramaID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    </tbody>
+            }
+
+    </table>
