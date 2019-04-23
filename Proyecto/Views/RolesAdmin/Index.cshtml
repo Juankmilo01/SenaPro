@@ -3,11 +3,10 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
+<br />
+<br />
 <p>
-    @Html.ActionLink("Nuevo Rol", "Create", null, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Registrar Rol", "Create", null, new { @class = "btn btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -26,9 +25,9 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.ActionLink("Modificar", "Edit", new { id = item.Id }, new { @class = "btn btn-success" }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Editar", "Edit", null, new { id = item.Id }, new { @class = "btn btn-info" }) |
+                @*@Html.ActionLink("Detalles", "Details",null, new { id=item.Id }, new { @class = "btn btn-success" }) |*@
+                @Html.ActionLink("Eliminar", "Delete", null, new { id = item.Id, }, new { @class = "btn btn-danger" })
             </td>
         </tr>
     }

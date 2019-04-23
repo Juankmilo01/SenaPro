@@ -3,11 +3,10 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2 style=" text-align:center">DEPARTAMENTOS</h2>
-
+<br />
+<br />
 <p>
-    @Html.ActionLink("Nuevo Departamento", "Create", null, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Registrar Departamento", "Create", null, new { @class = "btn btn-primary" })
 </p>
 <table class="table table-light table-hover">
     <thead class="thead-light">
@@ -21,20 +20,18 @@
 
     @foreach (var item in Model)
     {
-    <tbody>
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NombreDepartamento)
-            </td>
-            <td>
-                @Html.ActionLink("Modificar", "Edit", new { id = item.DepartamentoID }, new { @class = "btn btn-success" })
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreDepartamento)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", null, new { id = item.DepartamentoID }, new { @class = "btn btn-info" }) |
+                    @*@Html.ActionLink("Detalles", "Details",null, new { id=item.DepartamentoID }, new { @class = "btn btn-success" }) |*@
+                    @Html.ActionLink("Eliminar", "Delete", null, new { id = item.DepartamentoID, }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        </tbody>
+    }
 
-                @Html.ActionLink("Detalles", "Details", new { id = item.DepartamentoID }, new { @class = "btn btn-info" })
-
-                @Html.ActionLink("Borrar", "Delete", new { id = item.DepartamentoID }, new { @class = "btn btn-danger" })
-            </td>
-        </tr>
-    </tbody>
-            }
-
-    </table>
+</table>
