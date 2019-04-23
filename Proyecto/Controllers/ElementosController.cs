@@ -89,7 +89,7 @@ namespace Proyecto.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.AmbientesID = new SelectList(db.Ambientes, "AmbientesID", "Numero_Ambiente", elementos.AmbientesID);
+            ViewBag.AmbientesID = new SelectList(db.Ambientes.Where(e => e.Estado_Ambientes.Nombre_Estado == "Activo"), "AmbientesID", "Numero_Ambiente", elementos.AmbientesID);
             ViewBag.Estado_ElementosID = new SelectList(db.Estado_Elementos, "Estado_ElementosID", "Nombre_Estado", elementos.Estado_ElementosID);
             ViewBag.Tipo_ElementosID = new SelectList(db.Tipo_Elementos, "Tipo_ElementosID", "Nombre_TipoElemento", elementos.Tipo_ElementosID);
             return View(elementos);

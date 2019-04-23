@@ -78,7 +78,7 @@ namespace Proyecto.Controllers
                 return HttpNotFound();
             }
             ViewBag.Estado_AmbientesID = new SelectList(db.Estado_Ambientes, "Estado_AmbientesID", "Nombre_Estado", ambientes.Estado_AmbientesID);
-            ViewBag.personaID = new SelectList(db.Personas, "personaID", "Nombre", ambientes.personaID);
+            ViewBag.personaID = new SelectList(db.Personas.Where(r => r.Roles.NombreRoles == "Instructor"), "personaID", "Nombre", ambientes.personaID);
             return View(ambientes);
         }
 
