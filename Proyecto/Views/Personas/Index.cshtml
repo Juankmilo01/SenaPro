@@ -3,11 +3,10 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2 style=" text-align:center">USUARIOS</h2>
-
+<br />
+<br />
 <p>
-    @Html.ActionLink("Nuevo Usuario", "Create", null, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Registrar Persona", "Create", null, new { @class = "btn btn-primary" })
 </p>
 <table class="table table-light table-hover">
     <thead class="thead-light">
@@ -61,73 +60,71 @@
             @*<th>
                     @Html.DisplayNameFor(model => model.NovedadesID)
                 </th>*@
-            <th></th><th>Acciones</th><th></th>
+            <th></th>
+            <th>Acciones</th>
+            <th></th>
         </tr>
     </thead>
 
     @foreach (var item in Model)
     {
-    <tbody>
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Apellido_Primario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Apellido_Segundo)
-            </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Tipo_Documento.NombreDocumento)
-        </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroDocumento)
-            </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Sexo.NombreSexo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ciudad.NombreCiudad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Direccion)
-        </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefono)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Numero_Celular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Programa.NombrePrograma)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Numero_Ficha)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Estado.NombreEstado)
-        </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Roles.NombreRoles)
-            </td>
-            @*<td>
-            @Html.DisplayNameFor(model => model.NovedadesID)
-        </td>*@
-            <td>
-                @Html.ActionLink("Modificar", "Edit", new { id = item.personaID }, new { @class = "btn btn-success" })
-            </td>
-            <td>
-                @Html.ActionLink("Detalles", "Details", new { id = item.personaID }, new { @class = "btn btn-info" })
-            </td>
-            <td>
-                @Html.ActionLink("Borrar", "Delete", new { id = item.personaID }, new { @class = "btn btn-danger" })
-            </td>
-        </tr>
-    </tbody>
-            }
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido_Primario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido_Segundo)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Tipo_Documento.NombreDocumento)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroDocumento)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Sexo.NombreSexo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ciudad.NombreCiudad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Direccion)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numero_Celular)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Programa.NombrePrograma)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Numero_Ficha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estado.NombreEstado)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Roles.NombreRoles)
+                </td>
+                @*<td>
+                        @Html.DisplayNameFor(model => model.NovedadesID)
+                    </td>*@
+                <td>
+                    @Html.ActionLink("Editar", "Edit", null, new { id = item.personaID }, new { @class = "btn btn-info" }) |
+                    @*@Html.ActionLink("Detalles", "Details",null, new { id=item.personaID }, new { @class = "btn btn-success" }) |*@
+                    @Html.ActionLink("Eliminar", "Delete", null, new { id = item.personaID, }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        </tbody>
+    }
 
-    </table>
+</table>

@@ -4,8 +4,6 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
 <div>
     <h4>Tipo_Documento</h4>
     <hr />
@@ -21,6 +19,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TipoDocumentoID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", null, new { id = Model.TipoDocumentoID }, new { @class = "btn btn-info" }) |
+    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-primary" })
 </p>

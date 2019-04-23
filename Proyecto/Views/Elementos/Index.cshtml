@@ -3,11 +3,10 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2 style=" text-align:center">ELEMENTOS</h2>
-
+<br />
+<br />
 <p>
-    @Html.ActionLink("Nuevo Elemento", "Create", null, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Registrar Elementos", "Create", null, new { @class = "btn btn-primary" })
 </p>
 <table class="table table-light table-hover">
     <thead class="thead-light">
@@ -44,43 +43,39 @@
 
     @foreach (var item in Model)
     {
-    <tbody>
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ambientes.Numero_Ambiente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado_Elementos.Nombre_Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tipo_Elementos.Nombre_TipoElemento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Numero_Serial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Placa_Equipo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ubicacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Detalle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Marca)
-            </td>
-            <td>
-                @Html.ActionLink("Modificar", "Edit", new { id = item.ElementosID }, new { @class = "btn btn-success" })
-            </td>
-            <td>
-                @Html.ActionLink("Detalles", "Details", new { id = item.ElementosID }, new { @class = "btn btn-info" })
-            </td>
-            <td>
-                @Html.ActionLink("Borrar", "Delete", new { id = item.ElementosID }, new { @class = "btn btn-danger" })
-            </td>
-        </tr>
-    </tbody>
-            }
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ambientes.Numero_Ambiente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado_Elementos.Nombre_Estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo_Elementos.Nombre_TipoElemento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numero_Serial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Placa_Equipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ubicacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Detalle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", null, new { id = item.ElementosID }, new { @class = "btn btn-info" }) |
+                    @*@Html.ActionLink("Detalles", "Details",null, new { id=item.ElementosID }, new { @class = "btn btn-success" }) |*@
+                    @Html.ActionLink("Eliminar", "Delete", null, new { id = item.ElementosID, }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        </tbody>
+    }
 
-    </table>
+</table>
