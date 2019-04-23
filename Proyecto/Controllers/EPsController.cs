@@ -41,7 +41,7 @@ namespace Proyecto.Controllers
         public ActionResult Create()
         {
             ViewBag.ElementosID = new SelectList(db.Elementos.Where(e => e.Estado_Elementos.Nombre_Estado == "Activo"), "ElementosID", "Numero_Serial");
-            ViewBag.PrestamosID = new SelectList(db.Prestamos, "PrestamosID", "Estado_Disposicion");
+            ViewBag.PrestamosID = new SelectList(db.Prestamos, "PrestamosID", "Fecha_Inicial");
             return View();
         }
 

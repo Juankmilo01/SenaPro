@@ -40,7 +40,7 @@ namespace Proyecto.Controllers
         // GET: Elementos/Create
         public ActionResult Create()
         {
-            ViewBag.AmbientesID = new SelectList(db.Ambientes, "AmbientesID", "Numero_Ambiente");
+            ViewBag.AmbientesID = new SelectList(db.Ambientes.Where(e => e.Estado_Ambientes.Nombre_Estado == "Activo"), "AmbientesID", "Numero_Ambiente");
             ViewBag.Estado_ElementosID = new SelectList(db.Estado_Elementos, "Estado_ElementosID", "Nombre_Estado");
             ViewBag.Tipo_ElementosID = new SelectList(db.Tipo_Elementos, "Tipo_ElementosID", "Nombre_TipoElemento");
             return View();
