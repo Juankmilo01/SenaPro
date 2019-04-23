@@ -50,7 +50,8 @@ namespace Proyecto.Controllers
         public ActionResult Create([Bind(Include = "PrestamosID,Estado_Disposicion,Fecha_Inicial,Fecha_Final,Descripcion")] Prestamos prestamos)
         {
             if (ModelState.IsValid)
-            {
+            {   
+               
                 db.Prestamos.Add(prestamos);
                 db.SaveChanges();
                 return RedirectToAction("Index");
